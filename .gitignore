@@ -1,2 +1,29 @@
 storage/*
 .idea/
+
+# Laravel project inside app/
+app/.env
+app/.env.local
+app/.env.*.local
+
+# Dependencies / build
+app/vendor/
+app/node_modules/
+
+# Storage & runtime (do nie commitować)
+auth/storage/*
+!app/storage/.gitkeep
+app/storage/logs/
+app/storage/framework/*
+
+# Cache / compiled files
+app/bootstrap/cache/
+app/.phpunit.result.cache
+app/public/storage
+
+# Editor settings
+app/.idea/
+app/.vscode/
+
+# Logs
+app/*.log

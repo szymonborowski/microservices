@@ -1,0 +1,8 @@
+# Dynamic configuration: TLS certificates (mkcert files placed in /certs) and dashboard router
+
+tls:
+  certificates:
+    - certFile: /certs/traefik.microservices.local.pem
+      keyFile: /certs/traefik.microservices.local-key.pem
+    - certFile: /certs/auth.microservices.local.pem
+      keyFile: /certs/auth.microservices.local-key.pem
