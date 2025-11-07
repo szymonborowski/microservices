@@ -1,0 +1,17 @@
+# Dynamic configuration: TLS certificates (mkcert files placed in /certs) and dashboard router
+
+http:
+  routers:
+    traefik-dashboard:
+      rule: "Host(`traefik.local.test`)"
+      service: api@internal
+      entryPoints:
+        - websecure
+      tls: {}
+
+tls:
+  certificates:
+    - certFile: /certs/traefik.local.test.pem
+      keyFile: /certs/traefik.local.test-key.pem
+    - certFile: /certs/auth.local.test.pem
+      keyFile: /certs/auth.local.test-key.pem
